@@ -1,0 +1,4 @@
+checkTodayData.bat
+Graphs/*
+__pycache__/*
+covidtracking.code-workspace
