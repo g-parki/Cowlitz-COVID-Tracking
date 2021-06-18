@@ -24,12 +24,12 @@ except:
     raise Exception("Issue parsing today's date")
 
 #load local CSV
-df = pd.read_csv('covidData.csv')
+df = pd.read_csv('COVIDData.csv')
 
 #Append current data if it's not in the CSV dataset    
 if not websiteDateStr in df['Date'].values:
 
-    with open('covidData.csv', 'a') as csv_file:
+    with open('COVIDData.csv', 'a') as csv_file:
         csv_writer = csv.writer(csv_file)
 
         try:
@@ -55,7 +55,7 @@ if not websiteDateStr in df['Date'].values:
     import matplotlib.pyplot as plt
     import os
 
-    df = pd.read_csv('covidData.csv')
+    df = pd.read_csv('COVIDData.csv')
     df = df.reindex(columns= ['Date', 'New Cases', 'Daily Average', 'Seven Day Average', 'Fourteen Day Sum'])
     df['Date'] = pd.to_datetime(df['Date'], format='%m/%d/%Y')
 
